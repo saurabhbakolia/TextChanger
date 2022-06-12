@@ -15,6 +15,10 @@ function App() {
           type:type,
           msg: message
       })
+
+      setTimeout(() => {
+        setAlert(null);
+      },2000);
   }
 
   // function to change the mode

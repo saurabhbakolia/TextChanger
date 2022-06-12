@@ -41,7 +41,7 @@
 
       // function to handle the extra space event 
       const handleExtraSpace = () =>{
-        console.log("triggered extra space");
+        // console.log("triggered extra space");
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
         props.showAlert("success", "Extra spaces has been removed!");
@@ -49,13 +49,11 @@
 
       // function to convert text into capitalize
       const handleCapitalClick = () =>{
+        props.showAlert("success", "Text has been capitalized!");
         let capitalize ="";
           text.split(" ").forEach(function(word, index, array) {
             array[index] = (array[index].toLowerCase()).charAt(0).toUpperCase() + (array[index].toLowerCase().slice(1));
-            console.log(array[index]);
-            console.log(array.toString());
-            capitalize = array.toString().replace(/,,/g, ", ");
-            // console.log(capitalize);
+            capitalize = array.join(" ");
           });
           setText(capitalize);
       }
